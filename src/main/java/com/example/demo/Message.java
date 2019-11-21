@@ -29,6 +29,16 @@ public class Message {
     @Size(min=3)
     private String postedBy;
 
+    public Message(@NotNull @Size(min = 4) String title, @NotNull @Size(min = 3) String content, @NotNull @Size(min = 3) String postedDate, @NotNull @Size(min = 3) String postedBy) {
+        this.title = title;
+        this.content = content;
+        this.postedDate = postedDate;
+        this.postedBy = postedBy;
+    }
+
+    public Message() {
+    }
+
     public long getId() {
         return id;
     }
